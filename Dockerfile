@@ -1,6 +1,6 @@
 ARG PB_VERSION=0.27.2
 
-FROM alpine:latest AS setup
+FROM --platform=linux/arm64 alpine:latest AS setup
 
 ARG PB_VERSION
 WORKDIR /setup
@@ -9,7 +9,7 @@ RUN apk add --no-cache unzip ca-certificates
 ADD https://github.com/pocketbase/pocketbase/releases/download/v${PB_VERSION}/pocketbase_${PB_VERSION}_linux_arm64.zip /tmp/pb.zip
 RUN unzip /tmp/pb.zip -d ./
 
-FROM alpine:latest AS app
+FROM --platform=linux/arm64 alpine:latest AS app
 
 ARG PB_VERSION
 

@@ -1,9 +1,12 @@
 # PocketBase Docker
 
 - *This is not an official nor affiliated repository of PocketBase*
+- This has been forked from BakirGracic for the arm64 image.
 - Images have `latest` and PocketBase version tags (e.g. `0.27.2`)
-- GitHub: [github.com/BakirGracic/pocketbase-docker](https://github.com/BakirGracic/pocketbase-docker)
-- Docker Hub: [bakirg/pocketbase-docker](https://hub.docker.com/repository/docker/bakirg/pocketbase-docker)
+- Original Author's GitHub: [github.com/BakirGracic/pocketbase-docker](https://github.com/BakirGracic/pocketbase-docker)
+- Original Author's Docker Hub: [bakirg/pocketbase-docker](https://hub.docker.com/repository/docker/bakirg/pocketbase-docker)
+- My GitHub: [github.com/hamzazafarc/pocketbase-docker-arm64](https://github.com/hamzazafarc/pocketbase-docker-arm64)
+- Original Author's Docker Hub: [hyzkin/pocketbase-docker-arm64](https://hub.docker.com/repository/docker/hyzkin/pocketbase-docker-arm64)
 
 
 ---
@@ -68,7 +71,7 @@ docker run -d \
 ```yaml
 services:
   pocketbase_service:
-    image: docker.io/bakirg/pocketbase-docker:latest
+    image: docker.io/hyzkin/pocketbase-docker-arm64:latest
     container_name: pocketbase_container
     restart: unless-stopped
     ports:
